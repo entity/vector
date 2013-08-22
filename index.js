@@ -21,7 +21,7 @@ module.exports = Vector;
  * @api public
  */
 
-function Vector(x, y) {
+function Vector(x, y){
   if (!(this instanceof Vector)) return new Vector(x, y);
   this.x = 0;
   this.y = 0;
@@ -67,7 +67,7 @@ V.set = function(x, y){
  * @api public
  */
 
-V.add = function(v) {
+V.add = function(v){
   return new Vector(
     this.x + v.x,
     this.y + v.y
@@ -82,7 +82,7 @@ V.add = function(v) {
  * @api public
  */
 
-V.madd = function(v) {
+V.madd = function(v){
   this.x += v.x;
   this.y += v.y;
   return this;
@@ -96,7 +96,7 @@ V.madd = function(v) {
  * @api public
  */
 
-V.sub = function(v) {
+V.sub = function(v){
   return new Vector(
     this.x - v.x,
     this.y - v.y
@@ -111,7 +111,7 @@ V.sub = function(v) {
  * @api public
  */
 
-V.msub = function(v) {
+V.msub = function(v){
   this.x -= v.x;
   this.y -= v.y;
   return this;
@@ -125,7 +125,7 @@ V.msub = function(v) {
  * @api public
  */
 
-V.mul = function(v) {
+V.mul = function(v){
   return new Vector(
     this.x * v.x,
     this.y * v.y
@@ -140,7 +140,7 @@ V.mul = function(v) {
  * @api public
  */
 
-V.mmul = function(v) {
+V.mmul = function(v){
   this.x *= v.x;
   this.y *= v.y;
   return this;
@@ -154,7 +154,7 @@ V.mmul = function(v) {
  * @api public
  */
 
-V.div = function(v) {
+V.div = function(v){
   return new Vector(
     this.x / v.x,
     this.y / v.y
@@ -169,7 +169,7 @@ V.div = function(v) {
  * @api public
  */
 
-V.mdiv = function(v) {
+V.mdiv = function(v){
   this.x /= v.x;
   this.y /= v.y;
   return this;
@@ -182,7 +182,7 @@ V.mdiv = function(v) {
  * @api public
  */
 
-V.clone = function() {
+V.clone = function(){
   return new Vector(this);
 };
 
@@ -193,7 +193,7 @@ V.clone = function() {
  * @return {Vector} v
  */
 
-V.copyTo = function(v) {
+V.copyTo = function(v){
   v.x = this.x;
   v.y = this.y;
   return v;
@@ -207,7 +207,7 @@ V.copyTo = function(v) {
  * @api public
  */
 
-V.dot = function(v) {
+V.dot = function(v){
   v = v || this;
   return this.x*v.x + this.y*v.y;
 };
@@ -220,7 +220,7 @@ V.dot = function(v) {
  * @api public
  */
 
-V.cross = function(v) {
+V.cross = function(v){
   return this.x*v.y - this.y*v.x;
 };
 
@@ -231,7 +231,7 @@ V.cross = function(v) {
  * @api public
  */
 
-V.mag = function() {
+V.mag = function(){
   return Math.sqrt(this.dot());
 };
 
@@ -242,7 +242,7 @@ V.mag = function() {
  * @api public
  */
 
-V.normalize = function() {
+V.normalize = function(){
   return this.div(new Vector(this.mag()));
 };
 
@@ -254,7 +254,7 @@ V.normalize = function() {
  * @api public
  */
 
-V.distance = function(v) {
+V.distance = function(v){
   return v.sub(this).mag();
 };
 
@@ -265,7 +265,7 @@ V.distance = function(v) {
  * @api public
  */
 
-V.radians = function() {
+V.radians = function(){
   return Math.atan2(this.x, this.y);
 };
 
@@ -287,7 +287,7 @@ V.angle = function(){
  * @return {Vector}
  */
 
-V.scale = function(scale) {
+V.scale = function(scale){
   var mag = this.mag();
   return new Vector(
     this.x * scale / mag,
@@ -302,7 +302,7 @@ V.scale = function(scale) {
  * @api public
  */
 
-V.abs = function() {
+V.abs = function(){
   return new Vector(
     Math.abs(this.x),
     Math.abs(this.y)
@@ -316,7 +316,7 @@ V.abs = function() {
  * @api public
  */
 
-V.neg = function() {
+V.neg = function(){
   return new Vector(
     -this.x,
     -this.y
@@ -332,7 +332,7 @@ V.neg = function() {
  * @api public
  */
 
-V.lerp = function(v, a) {
+V.lerp = function(v, a){
   return this.add(v.sub(this).mul(new Vector(a)));
 };
 
@@ -344,7 +344,7 @@ V.lerp = function(v, a) {
  * @api public
  */
 
-V.equals = function(v) {
+V.equals = function(v){
   return (
     this.x === v.x &&
     this.y === v.y
@@ -359,7 +359,7 @@ V.equals = function(v) {
  * @api public
  */
 
-V.lessThan = function(v) {
+V.lessThan = function(v){
   return this.mag() < v.mag();
 };
 
@@ -371,7 +371,7 @@ V.lessThan = function(v) {
  * @api public
  */
 
-V.lessThanEqual = function(v) {
+V.lessThanEqual = function(v){
   return this.mag() <= v.mag();
 };
 
@@ -383,7 +383,7 @@ V.lessThanEqual = function(v) {
  * @api public
  */
 
-V.greaterThan = function(v) {
+V.greaterThan = function(v){
   return this.mag() > v.mag();
 };
 
@@ -395,7 +395,7 @@ V.greaterThan = function(v) {
  * @api public
  */
 
-V.greaterThanEqual = function(v) {
+V.greaterThanEqual = function(v){
   return this.mag() >= v.mag();
 };
 
@@ -406,7 +406,7 @@ V.greaterThanEqual = function(v) {
  * @api public
  */
 
-V.toString = function() {
+V.toString = function(){
   return this.x + ',' + this.y;
 };
 
@@ -417,7 +417,7 @@ V.toString = function() {
  * @api public
  */
 
-V.toFixed = function(d) {
+V.toFixed = function(d){
   return this.x.toFixed(d) + ',' + this.y.toFixed(d);
 };
 
