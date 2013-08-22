@@ -23,7 +23,27 @@ module.exports = Vector;
 
 function Vector(x, y) {
   if (!(this instanceof Vector)) return new Vector(x, y);
-  else if (x instanceof Vector) {
+  this.x = 0;
+  this.y = 0;
+  this.set(x, y);
+}
+
+/**
+ * Proto.
+ */
+
+var V = {};
+
+/**
+ * Set Vector elements.
+ *
+ * @param {Number|Vector} x
+ * @param {Number} [y]
+ * @return {Vector} this
+ */
+
+V.set = function(x, y){
+  if (x instanceof Vector) {
     this.x = x.x;
     this.y = x.y;
   }
@@ -36,13 +56,8 @@ function Vector(x, y) {
       this.y = y;
     }
   }
-}
-
-/**
- * Proto.
- */
-
-var V = {};
+  return this;
+};
 
 /**
  * Add A + B.
