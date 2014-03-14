@@ -1,7 +1,8 @@
 {
   "name": "vector",
+  "repo": "entity/vector",
   "version": "0.1.1",
-  "description": "vector",
+  "description": "vector 2d",
   "keywords": ["vector", "math"],
   "author": "stagas",
   "license": "MIT",
