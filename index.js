@@ -266,7 +266,7 @@ V.distance = function(v){
  */
 
 V.radians = function(){
-  return Math.atan2(this.x, this.y);
+  return Math.atan2(this.y, this.x);
 };
 
 /**
