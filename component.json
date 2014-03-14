@@ -5,5 +5,8 @@
   "keywords": ["vector", "math"],
   "author": "stagas",
   "license": "MIT",
-  "scripts": ["index.js"]
+  "scripts": ["index.js"],
+  "dependencies": {
+    "yields/merge": "*"
+  }
 }

@@ -8,6 +8,12 @@
  */
 
 /**
+ * Module dependencies.
+ */
+
+var merge = require('merge');
+
+/**
  * Expose `Vector`.
  */
 
@@ -425,10 +431,4 @@ V.toFixed = function(d){
  * Insert methods to `Vector.prototype`.
  */
 
-for (var method in V) {
-  Object.defineProperty(
-    Vector.prototype,
-    method,
-    { value: V[method] }
-  );
-}
+merge(Vector.prototype, V);
