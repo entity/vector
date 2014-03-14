@@ -277,7 +277,7 @@ V.radians = function(){
  */
 
 V.angle = function(){
-  return this.radians() * 180 / Math.PI;
+  return this.radians() * (180 / Math.PI);
 };
 
 /**
