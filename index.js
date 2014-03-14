@@ -359,7 +359,7 @@ V.equals = function(v){
  * @api public
  */
 
-V.lessThan = function(v){
+V.lt = function(v){
   return this.mag() < v.mag();
 };
 
@@ -371,7 +371,7 @@ V.lessThan = function(v){
  * @api public
  */
 
-V.lessThanEqual = function(v){
+V.lte = function(v){
   return this.mag() <= v.mag();
 };
 
@@ -383,7 +383,7 @@ V.lessThanEqual = function(v){
  * @api public
  */
 
-V.greaterThan = function(v){
+V.gt = function(v){
   return this.mag() > v.mag();
 };
 
@@ -395,7 +395,7 @@ V.greaterThan = function(v){
  * @api public
  */
 
-V.greaterThanEqual = function(v){
+V.gte = function(v){
   return this.mag() >= v.mag();
 };
 

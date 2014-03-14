@@ -58,10 +58,10 @@
     assert('5,5' == V().lerp(V(10), .5));
 
     assert(V(10,15).equals(V(10,15)));
-    assert(V(9,15).lessThan(V(10,15)));
-    assert(V(10,15).lessThanEqual(V(10,15)));
-    assert(V(10,16).greaterThan(V(10,15)));
-    assert(V(10,15).greaterThanEqual(V(10,15)));
+    assert(V(9,15).lt(V(10,15)));
+    assert(V(10,15).lte(V(10,15)));
+    assert(V(10,16).gt(V(10,15)));
+    assert(V(10,15).gte(V(10,15)));
 
     write('<br>OK - all tests pass');
 
