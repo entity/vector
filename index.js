@@ -46,6 +46,7 @@ var V = {};
  * @param {Number|Vector} x
  * @param {Number} [y]
  * @return {Vector} this
+ * @api public
  */
 
 V.set = function(x, y){
