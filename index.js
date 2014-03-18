@@ -429,6 +429,17 @@ V.toFixed = function(d){
 };
 
 /**
+ * Round elements.
+ *
+ * @return {Vector}
+ * @api public
+ */
+
+V.round = function(){
+  return new Vector(Math.round(this.x), Math.round(this.y));
+};
+
+/**
  * Insert methods to `Vector.prototype`.
  */
 
