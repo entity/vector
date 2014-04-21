@@ -302,6 +302,17 @@ V.scale = function(scale){
 };
 
 /**
+ * Perp.
+ * 
+ * @return {Vector}
+ * @api public
+ */
+
+V.perp = function(){
+  return new Vector(this.x, -this.y);
+};
+
+/**
  * Absolute.
  *
  * @return {Vector}
