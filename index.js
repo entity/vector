@@ -428,6 +428,19 @@ V.toFixed = function(d){
 };
 
 /**
+ * Inspect
+ * 
+ * @api public
+ */
+
+V.inspect = function(){
+  return '<Vector2D '
+    + 'x: ' + this.x
+    + 'y: ' + this.y
+    + '>';
+};
+
+/**
  * Insert methods to `Vector.prototype`.
  */
 
