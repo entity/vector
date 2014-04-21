@@ -8,12 +8,6 @@
  */
 
 /**
- * Module dependencies.
- */
-
-var merge = require('merge');
-
-/**
  * Expose `Vector`.
  */
 
@@ -38,7 +32,7 @@ function Vector(x, y){
  * Proto.
  */
 
-var V = {};
+var V = Vector.prototype = {};
 
 /**
  * Set Vector elements.
@@ -428,7 +422,14 @@ V.toFixed = function(d){
 };
 
 /**
- * Insert methods to `Vector.prototype`.
+ * Inspect
+ * 
+ * @api public
  */
 
-merge(Vector.prototype, V);
+V.inspect = function(){
+  return '<Vector2D '
+    + 'x: ' + this.x
+    + 'y: ' + this.y
+    + '>';
+};

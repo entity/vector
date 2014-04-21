@@ -7,7 +7,5 @@
   "author": "stagas",
   "license": "MIT",
   "scripts": ["index.js"],
-  "dependencies": {
-    "yields/merge": "*"
-  }
+  "dependencies": {}
 }
