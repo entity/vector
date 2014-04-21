@@ -63,6 +63,8 @@
     assert(V(10,16).gt(V(10,15)));
     assert(V(10,15).gte(V(10,15)));
 
+    assert('10,-10' == V(10, 10).perp());
+
     write('<br>OK - all tests pass');
 
     function write(msg) {
