@@ -8,12 +8,6 @@
  */
 
 /**
- * Module dependencies.
- */
-
-var merge = require('merge');
-
-/**
  * Expose `Vector`.
  */
 
@@ -38,7 +32,7 @@ function Vector(x, y){
  * Proto.
  */
 
-var V = {};
+var V = Vector.prototype = {};
 
 /**
  * Set Vector elements.
@@ -407,6 +401,17 @@ V.gte = function(v){
 };
 
 /**
+ * Round elements.
+ *
+ * @return {Vector}
+ * @api public
+ */
+
+V.round = function(){
+  return new Vector(Math.round(this.x), Math.round(this.y));
+};
+
+/**
  * Cast to string.
  *
  * @return {String}
@@ -429,18 +434,15 @@ V.toFixed = function(d){
 };
 
 /**
- * Round elements.
+ * Inspect
  *
- * @return {Vector}
+ * @return {String}
  * @api public
  */
 
-V.round = function(){
-  return new Vector(Math.round(this.x), Math.round(this.y));
+V.inspect = function(){
+  return '<Vector2D '
+    + 'x: ' + this.x
+    + 'y: ' + this.y
+    + '>';
 };
-
-/**
- * Insert methods to `Vector.prototype`.
- */
-
-merge(Vector.prototype, V);
